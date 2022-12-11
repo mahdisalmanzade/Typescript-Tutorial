@@ -27,17 +27,18 @@ let employeee: {
   id: 1,
   name: "Mahdi",
   retire: (date: Date) => {
-    console.log(date);
+    console.log(date.getFullYear());
   },
   greeting: (message: string) => {
-    console.log(message);
+    if (message.length === 0) return "Say something!";
     return message;
   },
 };
 
 employeee.name = "Anson";
 employeee.retire(new Date());
-employeee.greeting("Bla Bla Bla!");
+console.log(employeee.greeting("How are you?"));
+
 // employee.id = 2; // Cannot assign to 'id' because it is a read-only property.ts(2540)
 
 // let employee: {
